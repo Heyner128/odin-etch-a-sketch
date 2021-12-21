@@ -11,7 +11,7 @@ function drawBoard(size, b) {
             newDiv.className = "square";
             newDiv.addEventListener("mousedown",e=>newDiv.style.backgroundColor="black");
             newDiv.addEventListener("mouseover",e=>{if (mousedown) newDiv.style.backgroundColor="black"});
-            newDiv.addEventListener("touchmove",e=>{if (mousedown) newDiv.style.backgroundColor="black"});
+            newDiv.addEventListener("touchmove",e=>{newDiv.style.backgroundColor="black"});
             newDiv.id = "square " + (i+1) + " - " + (j+1);
             b.appendChild(newDiv);
         }
