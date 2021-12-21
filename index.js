@@ -9,6 +9,7 @@ function drawBoard(size, b) {
         for(let j = 0; j <size; j++) {
             const newDiv = document.createElement("div");
             newDiv.className = "square";
+            newDiv.addEventListener("mousedown",e=>newDiv.style.backgroundColor="black");
             newDiv.addEventListener("mouseover",e=>{if (mousedown) newDiv.style.backgroundColor="black"});
             newDiv.id = "square " + (i+1) + " - " + (j+1);
             b.appendChild(newDiv);
